@@ -1,0 +1,26 @@
+{
+  "name": "critical-path-method",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "vue": "^3.4.37"
+  },
+  "devDependencies": {
+    "@testing-library/vue": "^8.1.0",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "@vue/compiler-dom": "^3.4.38",
+    "@vue/server-renderer": "^3.4.38",
+    "happy-dom": "^15.0.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1",
+    "vitest": "^2.0.5",
+    "vue-tsc": "^2.0.29"
+  }
+}
