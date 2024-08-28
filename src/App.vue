@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import ActivityTable from './components/ActivityTable.vue'
-import activities from './assets/activities.ts'
 import Node from "./components/Node.vue"
 const data = {
   activity: "A",
@@ -13,7 +12,7 @@ const data = {
 </script>
 
 <template>
-  <ActivityTable id="nodes" :activities="activities" />
+  <ActivityTable id="nodes" />
   <div id="nodes" style="width:auto; height:300px;padding: 5px; border: 1px solid black;">  
     <Node :data="data" />
   </div>
