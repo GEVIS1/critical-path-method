@@ -82,18 +82,47 @@ console.log("data.activities[0].time", data.activities[0].time)
     table, th, td {
         border: 1px solid black;
     }
+    
+    input {
+        box-sizing: border-box;
+        border: none;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
     table {
         empty-cells: show;
     }
+    
     td {
-        color: blue;
+        padding: 0;
+        margin: 0;
+        vertical-align: middle;
+        height: 1.7em;
     }
+    
     td.activity.name {
         min-width: 10em;
-        text-align: left;
-        padding-left: 0.5em;
     }
+    
+    td.activity {
+        text-align: left;
+        padding-left: 0.3em;
+    }
+    
     td.activity.prerequisite, th.activity.prerequisite {
         max-width: 5em;
     }
+    
+    td.activity.time, th.activity.time {
+        max-width: 5em;
+    }
+    
+    td.activity > input:focus {
+        outline: none;
+        outline-width: 0;
+    }
+
 </style>
