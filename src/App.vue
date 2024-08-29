@@ -1,14 +1,55 @@
 <script setup lang="ts">
 import ActivityTable from './components/ActivityTable.vue'
 import Node from "./components/Node.vue"
-const data = {
-  activity: "A",
-  float: 5,
-  es: 0,
-  ls: 1,
-  ef: 3,
-  lf: 4
+export interface Activity {
+    name: string
+    id: string
+    pre: string
+    time: number
 }
+
+interface ActivityTableData {
+    activities: Array<Activity>
+}
+let data = reactive<ActivityTableData>({
+    activities: [{
+        name: "Shower",
+        id: "A",
+        pre: "-",
+        time: 3
+    },
+    {
+        name: "Get dressed",
+        id: "B",
+        pre: "A",
+        time: 2
+    },
+    {
+        name: "Get car",
+        id: "C",
+        pre: "-",
+        time: 15
+    },
+    {
+        name: "Make breakfast",
+        id: "D",
+        pre: "-",
+        time: 3
+    },
+    {
+        name: "Eat breakfast",
+        id: "E",
+        pre: "D",
+        time: 3
+    },
+    {
+        name: "Drive to school",
+        id: "F",
+        pre: "C,E",
+        time: 20
+    }]
+});
+provide("activityData", data.activities)
 </script>
 
 <template>
