@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { provide, reactive } from 'vue';
+
 import ActivityTable from './components/ActivityTable.vue'
 import Node from "./components/Node.vue"
 export interface Activity {
@@ -53,9 +55,9 @@ provide("activityData", data.activities)
 </script>
 
 <template>
-  <ActivityTable id="nodes" />
+  <ActivityTable />
   <div id="nodes" style="width:auto; height:300px;padding: 5px; border: 1px solid black;">  
-    <Node :data="data" />
+    <Node :data="data.activities[0]" />
   </div>
 </template>
 
